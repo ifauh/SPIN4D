@@ -159,12 +159,13 @@ details.arxiv-dd[open] .dropdown-menu{ display:block; }
 .arxiv-item-title{ display:block; font-weight:600; }
 .arxiv-item-meta{ font-size:.85rem; opacity:.8; }
 
-#arxiv-dd-btn .icon { display:inline-flex; align-items:center; }
+/* 仅微调这颗按钮里的 arXiv 图标基线，不影响全站其它 icon */
+#arxiv-dd-btn .icon { display: inline-flex; align-items: center; }
 #arxiv-dd-btn .icon i.ai {
-  font-size: 1em;
-  line-height: 1;
-  position: relative;
-  top: -10px;                  /* 1px 起步，按需要 0–2px 细调 */
+  font-size: 1em;           /* 与文字等高 */
+  line-height: 1;           /* 去掉额外行高 */
+  transform: translateY(0.08em); /* 往下压一点点，0.06–0.12em 自行微调 */
 }
+
 
 
