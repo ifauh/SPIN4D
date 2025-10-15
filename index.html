@@ -139,52 +139,15 @@
 
 
 
-                <style>
-                  details.arxiv-dropdown {
-                    position: relative; 
-                    display: inline-block;
-                  }
-                  details.arxiv-dropdown > summary {
-                    list-style: none;
-                    cursor: pointer;
-                  }
-                  details.arxiv-dropdown > summary::-webkit-details-marker { display: none; }
-
-                  details.arxiv-dropdown > summary .button {
-                    line-height: 1.0;
-                    font-size: 1rem;
-                  }
-
-                  details.arxiv-dropdown .icon.is-small i.ai {
-                    font-size: 1em;
-                  }
-
-                  details.arxiv-dropdown .dropdown-menu {
-                    display: none;
-                    position: absolute;
-                    right: 0;
-                    top: calc(100% + .25rem);
-                    z-index: 30;
-                  }
-                  details.arxiv-dropdown[open] .dropdown-menu {
-                    display: block;
-                  }
-
-                  .arxiv-menu { min-width: 280px; }
-                  .arxiv-item-title { display:block; font-weight:600; }
-                  .arxiv-item-meta { font-size: .85rem; opacity:.8; }
-                </style>
-
-                <details class="arxiv-dropdown">
+                <details class="arxiv-dd">
                   <summary aria-haspopup="true" aria-expanded="false">
-                    <span class="button is-dark is-rounded">
+                    <span class="button is-dark is-rounded has-caret">
                       <span class="icon is-small"><i class="ai ai-arxiv" aria-hidden="true"></i></span>
                       <span>arXiv（2）</span>
-                      <span class="icon is-small" aria-hidden="true">▾</span>
                     </span>
                   </summary>
 
-                  <div class="dropdown-menu arxiv-menu" role="menu">
+                  <div class="dropdown-menu" role="menu">
                     <div class="dropdown-content">
                       <a href="https://arxiv.org/abs/2407.20309" target="_blank" rel="noopener" class="dropdown-item">
                         <span class="arxiv-item-title">Paper I</span>
@@ -198,7 +161,6 @@
                     </div>
                   </div>
                 </details>
-
 
 
 
