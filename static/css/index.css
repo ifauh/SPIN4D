@@ -164,7 +164,7 @@ details.arxiv-dd[open] .dropdown-menu{ display:block; }
 #arxiv-dd-btn .icon i.ai {
   font-size: 1em;           /* 与文字等高 */
   line-height: 1;           /* 去掉额外行高 */
-  transform: translateY(0.8em); /* 往下压一点点，0.06–0.12em 自行微调 */
+  transform: translateY(-0.8em); /* 往下压一点点，0.06–0.12em 自行微调 */
 }
 
 
