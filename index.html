@@ -139,15 +139,54 @@
 
 
 
-                <details class="arxiv-dd">
-                  <summary aria-haspopup="true" aria-expanded="false">
-                    <span class="button is-dark is-rounded has-caret">
-                      <span class="icon is-small"><i class="ai ai-arxiv" aria-hidden="true"></i></span>
-                      <span>arXiv（2）</span>
-                    </span>
-                  </summary>
+                <style>
+                  .dd-inline { position: relative; display: inline-block; }
+                  .dd-inline input.dd-toggle { 
+                    position: absolute; left: -9999px; width: 0; height: 0; opacity: 0; 
+                  }
+                  /* 下拉菜单样式与定位 */
+                  .dd-inline .dropdown-menu {
+                    display: none;
+                    position: absolute; right: 0; top: calc(100% + .25rem);
+                    z-index: 30; min-width: 280px;
+                  }
+                  .dd-inline .dropdown-content .arxiv-item-title { display:block; font-weight:600; }
+                  .dd-inline .dropdown-content .arxiv-item-meta  { font-size:.85rem; opacity:.8; }
+                  /* 复选框选中时显示菜单 */
+                  .dd-inline input.dd-toggle:checked + label + .dropdown-menu { display: block; }
 
-                  <div class="dropdown-menu" role="menu">
+                  /* 让“按钮”本体和你原始按钮完全一致：使用同一套 Bulma 类，不改行高/内边距 */
+                  /* 仅用伪元素画三角，不改变高度 */
+                  .dd-inline label.button.has-caret::after {
+                    content: "▾";
+                    margin-left: .5em;
+                    font-size: .8em; line-height: 1; display: inline-block; transform: translateY(-1px);
+                  }
+
+                  /* 可选：点击菜单外部关闭：用 :has() 支持的浏览器可简易实现（不影响不支持的浏览器）*/
+                  @supports(selector(:has(*))) {
+                    body:has(.dd-inline input.dd-toggle:checked) .page-overlay-close { display:block; }
+                  }
+                  .page-overlay-close { display:none; position:fixed; inset:0; }
+                </style>
+
+                <!-- 覆盖层（可选，用于点击空白处关闭；不需要 JS） -->
+                <div class="page-overlay-close" onclick="document.querySelectorAll('.dd-inline input.dd-toggle').forEach(cb=>cb.checked=false)"></div>
+
+                <!-- ✅ 下拉组件：按钮完全沿用你的原始结构 -->
+                <div class="dd-inline">
+                  <!-- 隐藏的开关 -->
+                  <input id="arxiv-dd" class="dd-toggle" type="checkbox" aria-controls="arxiv-dd-menu" aria-expanded="false">
+                  <!-- 按钮本体：与原始一模一样，只额外加了 has-caret 以画小三角 -->
+                  <label for="arxiv-dd" class="external-link button is-normal is-rounded is-dark has-caret" role="button">
+                    <span class="icon">
+                      <i class="ai ai-arxiv" aria-hidden="true"></i>
+                    </span>
+                    <span>arXiv（2）</span>
+                  </label>
+
+                  <!-- 下拉菜单 -->
+                  <div id="arxiv-dd-menu" class="dropdown-menu" role="menu">
                     <div class="dropdown-content">
                       <a href="https://arxiv.org/abs/2407.20309" target="_blank" rel="noopener" class="dropdown-item">
                         <span class="arxiv-item-title">Paper I</span>
@@ -160,7 +199,7 @@
                       </a>
                     </div>
                   </div>
-                </details>
+                </div>
 
 
 
