@@ -164,7 +164,7 @@ details.arxiv-dd[open] .dropdown-menu{ display:block; }
   font-size: 1em;
   line-height: 1;
   position: relative;
-  top: -1px;                  /* 1px 起步，按需要 0–2px 细调 */
+  top: -10px;                  /* 1px 起步，按需要 0–2px 细调 */
 }
 
 
