@@ -133,16 +133,13 @@ body {
   font-size: smaller;
 }
 
-
-
-.link-block { display:inline-block; vertical-align: middle; }
-.dd-inline  { display:inline-block; vertical-align: middle; }
-.dd-inline label.button { display:inline-flex; align-items:center; }
-
-
 .link-block a,
 .link-block label.button,
 .link-block .button {
   margin-top: 5px;
   margin-bottom: 5px;
 }
+
+.link-block { display:inline-block; vertical-align: middle; }
+.dd-inline  { display:inline-block; vertical-align: middle; }
+.dd-inline label.button { display:inline-flex; align-items:center; }
