@@ -173,36 +173,29 @@
                 <!-- 覆盖层（可选，用于点击空白处关闭；不需要 JS） -->
                 <div class="page-overlay-close" onclick="document.querySelectorAll('.dd-inline input.dd-toggle').forEach(cb=>cb.checked=false)"></div>
 
+                <!-- ✅ 与其它按钮一致的外壳 -->
                 <span class="link-block">
                   <div class="dd-inline">
-                    <!-- 隐藏开关 -->
                     <input id="arxiv-dd" class="dd-toggle" type="checkbox" aria-controls="arxiv-dd-menu" aria-expanded="false">
-
-                    <!-- 按钮本体：仍然与你原始按钮完全一致的 Bulma 类 -->
-                    <label id="arxiv-dd-btn" for="arxiv-dd"
-                           class="external-link button is-normal is-rounded is-dark has-caret" role="button">
+                    <label id="arxiv-dd-btn" for="arxiv-dd" class="external-link button is-normal is-rounded is-dark has-caret" role="button">
                       <span class="icon"><i class="ai ai-arxiv" aria-hidden="true"></i></span>
                       <span>arXiv（2）</span>
                     </label>
-
-                    <!-- 下拉菜单 -->
                     <div id="arxiv-dd-menu" class="dropdown-menu" role="menu">
                       <div class="dropdown-content">
                         <a href="https://arxiv.org/abs/2407.20309" target="_blank" rel="noopener" class="dropdown-item">
-                          <span class="arxiv-item-title">Paper A 标题</span>
+                          <span class="arxiv-item-title">Paper I</span>
                           <span class="arxiv-item-meta">arXiv:2407.20309 · 2024</span>
                         </a>
                         <hr class="dropdown-divider">
                         <a href="https://arxiv.org/abs/2510.09967" target="_blank" rel="noopener" class="dropdown-item">
-                          <span class="arxiv-item-title">Paper B 标题</span>
+                          <span class="arxiv-item-title">Paper II</span>
                           <span class="arxiv-item-meta">arXiv:2510.09967 · 2025</span>
                         </a>
                       </div>
                     </div>
                   </div>
                 </span>
-
-
 
 
 
