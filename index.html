@@ -137,27 +137,50 @@
                   </a>
                 </span>
 
-                <!-- ArXiv abstract Link -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/2407.20309" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
 
-                <!-- ArXiv abstract Link -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/2510.09967" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
+                <style>
+                  details.arxiv-dropdown > summary {
+                    list-style: none;
+                  }
+                  details.arxiv-dropdown > summary::-webkit-details-marker { display: none; }
+                  details.arxiv-dropdown > summary > .button { width: 100%; }
+                  .arxiv-menu { min-width: 280px; }
+                  .arxiv-item-title { display:block; font-weight:600; }
+                  .arxiv-item-meta { font-size: .85em; opacity:.8; }
+                </style>
+
+                <details class="arxiv-dropdown dropdown is-right">
+                  <summary>
+                    <a class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon"><i class="ai ai-arxiv"></i></span>
+                      <span>arXiv（2）</span>
+                      <span class="icon is-small" aria-hidden="true">▾</span>
+                    </a>
+                  </summary>
+
+                  <div class="dropdown-menu arxiv-menu" role="menu">
+                    <div class="dropdown-content">
+                      <a href="https://arxiv.org/abs/2407.20309" target="_blank" class="dropdown-item">
+                        <span class="arxiv-item-title">Paper I</span>
+                        <span class="arxiv-item-meta">arXiv:2407.20309 · 2024</span>
+                      </a>
+                      <hr class="dropdown-divider">
+                      <a href="https://arxiv.org/abs/2510.09967" target="_blank" class="dropdown-item">
+                        <span class="arxiv-item-title">Paper II</span>
+                        <span class="arxiv-item-meta">arXiv:2510.09967 · 2025</span>
+                      </a>
+                    </div>
+                  </div>
+                </details>
+
+
+
+
+
+
+
+
+                      
                       
             </div>
           </div>
