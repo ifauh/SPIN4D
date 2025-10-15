@@ -143,3 +143,29 @@ body {
 .link-block { display:inline-block; vertical-align: middle; }
 .dd-inline  { display:inline-block; vertical-align: middle; }
 .dd-inline label.button { display:inline-flex; align-items:center; }
+
+
+
+.link-block { display:inline-block; vertical-align: middle; }
+.dd-inline  { display:inline-block; vertical-align: middle; }
+.dd-inline label.button { display:inline-flex; align-items:center; }
+/* 让 a.button 和 label.button 上下边距一致，避免“整体更高”的错觉 */
+.link-block a,
+.link-block label.button,
+.link-block .button {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+/* 用 ::after 画下拉三角，和 arXiv 同款 */
+.dd-inline label.button.has-caret::after{
+  content:"▾"; margin-left:.5em; font-size:.8em; line-height:1; display:inline-block; transform:translateY(-1px);
+}
+/* 菜单显隐与定位（你已存在，可复用） */
+.dd-inline input.dd-toggle{ position:absolute; left:-9999px; width:0; height:0; opacity:0; }
+.dd-inline .dropdown-menu{ display:none; position:absolute; right:0; top:calc(100% + .25rem); z-index:30; min-width:280px; }
+.dd-inline input.dd-toggle:checked + label + .dropdown-menu{ display:block; }
+
+
+
+
+
