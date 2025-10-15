@@ -242,8 +242,55 @@
 <!--End paper poster -->
 
 
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Paper II Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Inferring the three-dimensional (3D) solar atmospheric structures from observations is a critical task for advancing our understanding of the magnetic fields and electric currents that drive solar activity. In this work, we introduce a novel, Physics-Informed Machine Learning method to reconstruct the 3D structure of the lower solar atmosphere based on the output of optical depth sampled spectropolarimetric inversions, wherein both the fully disambiguated vector magnetic fields and the geometric height associated with each optical depth are returned simultaneously. Traditional techniques typically resolve the 180-degree azimuthal ambiguity assuming a single layer, either ignoring the intrinsic non-planar physical geometry of constant optical-depth surfaces (e.g., the Wilson depression in sunspots), or correcting the effect as a post-processing step. In contrast, our approach simultaneously maps the optical depths to physical heights, and enforces the divergence-free condition for magnetic fields fully in 3D. Tests on magnetohydrodynamic simulations of quiet Sun, plage, and a sunspot demonstrate that our method reliably recovers the horizontal magnetic field orientation in locations with appreciable magnetic field strength. By coupling the resolutions of the azimuthal ambiguity and the geometric heights problems, we achieve a self-consistent reconstruction of the 3D vector magnetic fields and, by extension, the electric current density and Lorentz force. This physics-constrained, label-free training paradigm is a generalizable, physics-anchored framework that extends across solar magnetic environments while improving the understanding of various solar puzzles
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
 
 
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/flowchart_hdd.png" alt="HDD Workflow"/>
+          <h2 class="subtitle has-text-centered">
+            Panel (a) shows the flowchart for training the model. The inputs are the 3D magnetic vector fields with azimuthal ambiguity, and an initial guess of the geometric heights associated with each optical-depth layer. The UNet3DB network predicts 3D vector magnetic field, and the UNet3DZ network provides the geometric heights. They are combined to compute a custom loss function with physics law encoded. Panel (b) shows the post-processing step that assembles the outputs from the neural networks (prediction) and the original input magnetic fields into the final output. Panel (c) shows an example of the 3D data, split with overlaps between nearby subfields. These individual subfields are used as the input for training. Panel (d) presents the UNet3D structure
+          </h2>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/hdd_geometry.png" alt="HDD Geometric Height Scale Prediction"/>
+          <h2 class="subtitle has-text-centered">
+            Results for geometric heights for the Sunspot. Panels (a) and (b) present the true and predicted height values for the log10τ = −1 layer. Panels (c)–(f) show vertical cuts across the domain, along the dashed lines in (a). The colors represent the Bz distribution and span the optical depths from log10 τ = 0 to −3.1. The five dashed black curves indicate log10τ values of −0.5, −1, −1.5, −2.0, and −2.5 from bottom to top, respectively. Panels (c) and (e) display ground truth at vertical cuts X = 25.2 Mm and Y = 16.3 Mm, respectively, while (d) and (f) show the corresponding HDD results.
+          </h2>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/lorentz_force.png" alt="HDD Predicted 3D Vector Lorentz Force"/>
+          <h2 class="subtitle has-text-centered">
+            Columns from left to right show the x-, y-, z-components, and the absolute value of the Lorentz force in the Sunspot. Panels (a)–(d) and (e)–(h) display the top view of the Lorentz force on the log10τ = −1 layer of the ground truth and HDD result, respectively. Panels (i)–(l) and (m)–(p) present the Lorentz force distribution on the true and predicted vertical cuts at Y = 16.4 Mm, indicated by the white dashed line in panel (d).
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End image carousel -->
   
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
