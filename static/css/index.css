@@ -137,7 +137,7 @@ details.arxiv-dd{ display:inline-block; position:relative; }
 details.arxiv-dd > summary{ list-style:none; cursor:pointer; display:inline-block; margin:0; padding:0; }
 details.arxiv-dd > summary::-webkit-details-marker{ display:none; }
 
-details.arxiv-dd .button{ font-size:1rem; line-height:1.5; padding:0.5em 1em; }
+details.arxiv-dd .button{ font-size:1rem; line-height:1.5; padding:0.0em 0em; }
 
 details.arxiv-dd .icon.is-small i.ai{ font-size:1em; }
 
