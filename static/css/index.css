@@ -160,5 +160,10 @@ details.arxiv-dd[open] .dropdown-menu{ display:block; }
 .arxiv-item-meta{ font-size:.85rem; opacity:.8; }
 
 
+/* 让同一行的按钮都按中线对齐，避免基线差造成的“整体偏高” */
+.link-block { display:inline-block; vertical-align: middle; }
+.dd-inline  { display:inline-block; vertical-align: middle; }  /* 下拉外壳 */
+/* 可选：按钮内部内容按中线，进一步严丝合缝 */
+.dd-inline label.button { display:inline-flex; align-items:center; }
 
 
